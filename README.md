@@ -8,9 +8,10 @@ The approach is to have a redux store created in the server side and shipping it
 - Javascript serialization used for preventing XSS attacks
 - Used `styled components` for styling
 - Build and packaging using webpack
+- ESlint for code quality checks
 
 
-## Tech stack
+## Tech stack and tools
 
 - React
 - Redux
@@ -19,3 +20,4 @@ The approach is to have a redux store created in the server side and shipping it
 - Webpack
 - Babel
 - Styled Components
+- ESlint
