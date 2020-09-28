@@ -21,3 +21,7 @@ The approach is to have a redux store created in the server side and shipping it
 - Babel
 - Styled Components
 - ESlint
+
+## Light House Report
+
+
