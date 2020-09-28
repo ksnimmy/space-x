@@ -1,10 +1,10 @@
-import React from 'react';
-import { Helmet } from 'react-helmet';
-import { fetchMissions, updateLaunchYear } from '../../actions';
-import { PageContainer } from '../../common/PageContainer';
-import { HomeStyle } from '../../styles/Home.style';
-import Filter from '../Filter';
-import MissionList from '../MissionList';
+import React from "react";
+import { Helmet } from "react-helmet";
+import { fetchMissions, updateLaunchYear } from "../../actions";
+import { PageContainer } from "../../common/PageContainer";
+import { HomeStyle } from "../../styles/Home.style";
+import Filter from "../Filter";
+import MissionList from "../MissionList";
 
 class Home extends React.Component {
     constructor(props) {
@@ -47,7 +47,7 @@ class Home extends React.Component {
             </div>
         );
     }
-};
+}
 
 const loadData = (store, criteria) => {
     if (criteria) {
@@ -63,7 +63,7 @@ const loadData = (store, criteria) => {
     else {
         return store.dispatch(fetchMissions());
     }
-}
+};
 export { loadData };
 
 export default Home;

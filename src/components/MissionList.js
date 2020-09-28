@@ -1,9 +1,9 @@
-import React from 'react';
-import { connect } from 'react-redux';
-import queryString from 'query-string';
-import { fetchMissions } from '../actions';
-import MissionTile from './MissionTile';
-import { MissionListStyle } from '../styles/MissionList.style';
+import React from "react";
+import { connect } from "react-redux";
+import queryString from "query-string";
+import { fetchMissions } from "../actions";
+import MissionTile from "./MissionTile";
+import { MissionListStyle } from "../styles/MissionList.style";
 
 class MissionList extends React.Component {
     constructor(props) {
@@ -42,8 +42,8 @@ class MissionList extends React.Component {
                     launchYear={program.launch_year}
                     imgSrc={program.links.mission_patch_small}
                 />
-            )
-        })
+            );
+        });
     }
 
     render() {
@@ -57,14 +57,14 @@ class MissionList extends React.Component {
                     </div>
                 }
             </MissionListStyle>
-        )
+        );
     }
 }
 
 const mapStateToProps = (state) => {
     return {
         missions: state.missions
-    }
-}
+    };
+};
 
 export default connect(mapStateToProps, { fetchMissions })(MissionList);

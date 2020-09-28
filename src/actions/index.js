@@ -1,6 +1,6 @@
-import axios from 'axios';
-import { FETCH_MISSIONS, UPDATE_FILTER } from './actionTypes';
-import { CONSTANTS } from '../helpers/constants';
+import axios from "axios";
+import { FETCH_MISSIONS, UPDATE_FILTER } from "./actionTypes";
+import { CONSTANTS } from "../helpers/constants";
 
 export const fetchMissions = (criteria) => {
     return async (dispatch) => {
@@ -21,12 +21,12 @@ export const fetchMissions = (criteria) => {
             type: FETCH_MISSIONS,
             payload: res
         });
-    }
-}
+    };
+};
 
 export const updateLaunchYear = (criteria) => {
     return {
         type: UPDATE_FILTER,
         payload: criteria
     };
-}
+};

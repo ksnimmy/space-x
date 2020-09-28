@@ -1,18 +1,18 @@
-import React from 'react';
+import React from "react";
 import { withRouter } from "react-router";
-import { connect } from 'react-redux';
-import { Button } from '../common/Button'
-import { FilterStyle } from '../styles/Filter.style';
-import { fetchMissions } from '../actions';
-import { CONSTANTS } from '../helpers/constants';
+import { connect } from "react-redux";
+import { Button } from "../common/Button";
+import { FilterStyle } from "../styles/Filter.style";
+import { fetchMissions } from "../actions";
+import { CONSTANTS } from "../helpers/constants";
 
 class Filter extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            launchYear: '',
-            launch: '',
-            landing: ''
+            launchYear: "",
+            launch: "",
+            landing: ""
         };
     }
     componentDidMount() {
@@ -45,27 +45,27 @@ class Filter extends React.Component {
         this.props.fetchMissions({ launchYear, launch, landing });
         this.props.onFilterApply(true);
         this.props.history.push({
-            pathname: '/',
+            pathname: "/",
             search: `?launch_year=${launchYear}&launch_success=${launch}&land_success=${landing}`
         });
     }
     onResetFilter() {
-        this.props.onFilterApply(false)
+        this.props.onFilterApply(false);
         this.setState({
-            launchYear: '',
-            launch: '',
-            landing: ''
+            launchYear: "",
+            launch: "",
+            landing: ""
         }, () => {
             this.props.history.push({
-                pathname: '/',
-                search: `?`
+                pathname: "/",
+                search: "?"
             });
         });
     }
     renderLaunchYear() {
         return CONSTANTS.LAUNCH_YEAR_FILTER.map(item => {
             return (
-                <Button key={item} className={item === this.state.launchYear ? 'active' : ''} type="buttton" onClick={() => this.filterProgramsByLaunchYear(item)} >{item}</Button>
+                <Button key={item} className={item === this.state.launchYear ? "active" : ""} type="buttton" onClick={() => this.filterProgramsByLaunchYear(item)} >{item}</Button>
             );
         });
     }
@@ -81,30 +81,30 @@ class Filter extends React.Component {
                     </div>
                 </div>
                 <div className="criteria">
-                    <h4>Successfull Launch</h4>
+                    <h4>Successful Launch</h4>
                     <div>
                         <Button type="buttton"
-                            className={launch === '' ? '' : launch ? 'active' : ''}
+                            className={launch === "" ? "" : launch ? "active" : ""}
                             onClick={() => this.filterProgramsByLaunch(true)} >
                             True
                         </Button>
                         <Button type="buttton"
-                            className={launch === '' ? '' : !launch ? 'active' : ''}
+                            className={launch === "" ? "" : !launch ? "active" : ""}
                             onClick={() => this.filterProgramsByLaunch(false)} >
                             False
                         </Button>
                     </div>
                 </div>
                 <div className="criteria">
-                    <h4>Successfull Landing</h4>
+                    <h4>Successful Landing</h4>
                     <div>
                         <Button type="buttton"
-                            className={landing === '' ? '' : landing ? 'active' : ''}
+                            className={landing === "" ? "" : landing ? "active" : ""}
                             onClick={() => this.filterProgramsByLanding(true)}>
                             True
                         </Button>
                         <Button type="buttton"
-                            className={landing === '' ? '' : !landing ? 'active' : ''}
+                            className={landing === "" ? "" : !landing ? "active" : ""}
                             onClick={() => this.filterProgramsByLanding(false)}>
                             False
                         </Button>
@@ -112,7 +112,7 @@ class Filter extends React.Component {
                     <a className="btn btn-link btn-reset-filter" onClick={() => this.onResetFilter()}>Reset filter</a>
                 </div>
             </FilterStyle>
-        )
+        );
     }
 
 }
@@ -120,8 +120,8 @@ class Filter extends React.Component {
 const mapStateToProps = (state) => {
     return {
         filter: state.filter
-    }
-}
+    };
+};
 
 export default connect(mapStateToProps, {
     fetchMissions

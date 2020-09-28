@@ -1,12 +1,12 @@
-import React from 'react';
-import { renderToString } from 'react-dom/server';
-import { StaticRouter } from 'react-router-dom';
-import { Provider } from 'react-redux';
-import { renderRoutes } from 'react-router-config';
-import serialize from 'serialize-javascript';
-import { Helmet } from 'react-helmet';
-import Routes from '../Routes';
-import { ServerStyleSheet } from 'styled-components'
+import React from "react";
+import { renderToString } from "react-dom/server";
+import { StaticRouter } from "react-router-dom";
+import { Provider } from "react-redux";
+import { renderRoutes } from "react-router-config";
+import serialize from "serialize-javascript";
+import { Helmet } from "react-helmet";
+import Routes from "../Routes";
+import { ServerStyleSheet } from "styled-components";
 
 export default (req, store) => {
     const sheet = new ServerStyleSheet();
@@ -24,7 +24,7 @@ export default (req, store) => {
 
     const helmet = Helmet.renderStatic();
     const styles = sheet.getStyleTags();
-    const title = 'SpaceX Launch Programs';
+    const title = "SpaceX Launch Programs";
 
     return `
         <!DOCTYPE html>

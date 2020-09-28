@@ -1,9 +1,9 @@
-import Home, {loadData } from './components/pages/Home';
+import Home, { loadData } from "./components/pages/Home";
 
 export default [
     {
         loadData,
-        path: '/',
+        path: "/",
         component: Home,
         exact: true
     }

@@ -1,7 +1,7 @@
-import React from 'react';
-import styled from 'styled-components';
-import { GlobalStyle } from '../styles/Global.style';
-import { Spinner } from '../common/Spinner';
+import React from "react";
+import styled from "styled-components";
+import { GlobalStyle } from "../styles/Global.style";
+import { Spinner } from "../common/Spinner";
 
 const Content = styled.div`
     background: #fff;
@@ -37,5 +37,5 @@ export const PageContainer = ({ children }) => {
                 Developed By :<strong> Nimmy Sambasivan</strong>
             </footer>
         </Content>
-    </div>
+    </div>;
 };

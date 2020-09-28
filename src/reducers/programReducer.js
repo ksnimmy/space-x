@@ -1,7 +1,7 @@
-import { FETCH_MISSIONS } from '../actions/actionTypes';
+import { FETCH_MISSIONS, } from "../actions/actionTypes";
 
-export default (state= [], action) => {
-    switch(action.type){
+export default (state = [], action) => {
+    switch (action.type) {
         case FETCH_MISSIONS:
             return action.payload.data;
         default:

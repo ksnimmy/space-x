@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 export const MissionListStyle = styled.div`
     & .no-content{
@@ -11,4 +11,4 @@ export const MissionListStyle = styled.div`
         line-height: 100px;
         margin-bottom: 40px;
     }
-`
+`;

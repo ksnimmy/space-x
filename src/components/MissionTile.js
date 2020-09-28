@@ -1,5 +1,5 @@
-import React from 'react';
-import { MissionCardStyle } from '../styles/MissionCard.style';
+import React from "react";
+import { MissionCardStyle } from "../styles/MissionCard.style";
 
 export default (props) => {
     const { missionName, missionIDs, imgSrc, flightNumber, launchYear, launchSuccess, landingSuccess } = props;
@@ -11,9 +11,9 @@ export default (props) => {
                         <li key={missionId}>{missionId}</li>)
                     }
                 </ul>
-                : '-'
+                : "-"
         );
-    }
+    };
     return (
         <MissionCardStyle >
             <div className="program-card">
@@ -33,16 +33,16 @@ export default (props) => {
                         <label>{launchYear}</label>
                     </p>
                     <p>
-                        <strong>Successfull Launch :</strong>
-                        <label>{launchSuccess ? launchSuccess.toString().toUpperCase() : '-'}</label>
+                        <strong>Successful Launch :</strong>
+                        <label>{launchSuccess ? launchSuccess.toString().toUpperCase() : "-"}</label>
                     </p>
                     <p>
-                        <strong>Successfull Landing :</strong>
-                        <label>{landingSuccess ? landingSuccess.toString().toUpperCase() : '-'}</label>
+                        <strong>Successful Landing :</strong>
+                        <label>{landingSuccess ? landingSuccess.toString().toUpperCase() : "-"}</label>
                     </p>
                 </div>
             </div>
         </MissionCardStyle>
     );
 
-}
+};

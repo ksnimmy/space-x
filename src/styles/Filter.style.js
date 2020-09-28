@@ -1,7 +1,6 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 export const FilterStyle = styled.div`
-
     background: #fff;
     border: 1px solid #f1efef;
     padding: 10px;

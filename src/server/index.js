@@ -1,13 +1,13 @@
-import 'babel-polyfill';
-import express from 'express';
-import { matchRoutes } from 'react-router-config';
-import serverRenderer from './serverRenderer';
-import createStore from '../helpers/createStore';
-import Routes from '../Routes';
+import "babel-polyfill";
+import express from "express";
+import { matchRoutes } from "react-router-config";
+import serverRenderer from "./serverRenderer";
+import createStore from "../helpers/createStore";
+import Routes from "../Routes";
 
 const app = express();
-app.use(express.static('public'));
-app.get('*', (req, res) => {
+app.use(express.static("public"));
+app.get("*", (req, res) => {
     const store = createStore();
     const promises = matchRoutes(Routes, req.path).map(({ route }) => {
         return route.loadData ? route.loadData(store, req.query) : null;
@@ -17,7 +17,7 @@ app.get('*', (req, res) => {
         res.send(serverRenderer(req, store));
     });
 });
-const port = process.env.PORT || 3000
+const port = process.env.PORT || 3000;
 app.listen(port, () => {
-    console.log('Listening to Port ' + port);
-})
+    console.log("Listening to Port " + port);
+});

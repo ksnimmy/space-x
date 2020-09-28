@@ -1,8 +1,8 @@
-import styled, { css } from 'styled-components';
+import styled, { css } from "styled-components";
 const theme = {
-    primaryColor: '#59a7287d',
-    secondaryColor: '#fdd54f',
-    activeColor: '#43a259f5'
+    primaryColor: "#59a7287d",
+    secondaryColor: "#fdd54f",
+    activeColor: "#43a259f5"
 };
 const Button = styled.button`
     margin: 5px 8px;

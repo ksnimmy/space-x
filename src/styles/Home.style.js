@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 export const HomeStyle = styled.div`
     & h1{
         font-size: 1.2em;
@@ -21,5 +21,4 @@ export const HomeStyle = styled.div`
             margin-top: 0px;
         }
     }
-    
-`
+`;
