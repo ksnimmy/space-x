@@ -8,13 +8,9 @@
     "dev:server": "nodemon --watch build --exec \"node build/bundle.js\"",
     "dev:build-server": "webpack --config webpack.server.js --watch",
     "dev:build-client": "webpack --config webpack.client.js --watch",
-    
-    "prod": "concurrently \" npm run prod:build-server\" \"npm run prod:build-client\" \"npm run dev:server\"",
-    "prod:server": "nodemon build --exec \"node build/bundle.js\"",
-    "prod:build-server": "webpack --config webpack.server.js",
-    "prod:build-client": "webpack --config webpack.client.js",
-
-    "heroku:build": "npm install && npm run prod:build-server"
+    "start": "node build/bundle.js",
+    "build": "webpack --config webpack.client.js & webpack --config webpack.server.js",
+    "build:start": "webpack --config webpack.client.js && webpack --config webpack.server.js && node build/bundle.js"
   },
   "author": "",
   "license": "ISC",
