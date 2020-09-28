@@ -12,8 +12,7 @@
     "build": "webpack --config webpack.client.js & webpack --config webpack.server.js",
     "build:start": "webpack --config webpack.client.js && webpack --config webpack.server.js && node build/bundle.js"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Nimmy Sambasivan",
   "dependencies": {
     "axios": "^0.20.0",
     "babel-cli": "6.26.0",
