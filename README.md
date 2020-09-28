@@ -24,4 +24,4 @@ The approach is to have a redux store created in the server side and shipping it
 
 ## Light House Report
 
-
+![Report](https://github.com/ksnimmy/space-x/blob/master/light_house.png)
