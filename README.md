@@ -16,4 +16,5 @@ The approach is to have a redux store created in the server side and shipping it
 - NodeJS
 - ExpressJS
 - Webpack
+- Babel
 - Styled Components
