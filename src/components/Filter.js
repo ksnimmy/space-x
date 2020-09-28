@@ -71,7 +71,6 @@ class Filter extends React.Component {
     }
     render() {
         const { launch, landing } = this.state;
-        const launchClass = launch === '' ? '' : launch ? 'active' : '';
         return (
             <FilterStyle>
                 <h3 className="title">Filters</h3>

@@ -6,7 +6,7 @@ export const fetchMissions = (criteria) => {
     return async (dispatch) => {
         let res;
         if (!criteria) {
-            res = await axios.get(CONSTANTS.URL);
+            res = await axios.get(CONSTANTS.BASE_API_URL);
         }
         else {
             const _params = {
@@ -14,7 +14,7 @@ export const fetchMissions = (criteria) => {
                 land_success: criteria.landing,
                 launch_year: criteria.launchYear
             };
-            res = await axios.get(CONSTANTS.URL, { params: _params });
+            res = await axios.get(CONSTANTS.BASE_API_URL, { params: _params });
         }
 
         dispatch({

@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import queryString from 'query-string';
 import { fetchMissions } from '../actions';
 import MissionTile from './MissionTile';
+import { MissionListStyle } from '../styles/MissionList.style';
 
 class MissionList extends React.Component {
     constructor(props) {
@@ -18,7 +19,7 @@ class MissionList extends React.Component {
             };
             this.props.fetchMissions(criteria);
         }
-        else{
+        else {
             this.props.fetchMissions();
         }
     }
@@ -47,9 +48,15 @@ class MissionList extends React.Component {
 
     render() {
         return (
-            <div>
-                {this.renderMissionList()}
-            </div>
+            <MissionListStyle>
+                {this.props.missions.length ?
+                    this.renderMissionList()
+                    : 
+                    <div className="no-content">
+                        No programs available !
+                    </div>
+                }
+            </MissionListStyle>
         )
     }
 }
