@@ -7,6 +7,7 @@ The approach is to have a redux store created in the server side and shipping it
 - Implemented `react-helmet` for better SEO
 - Javascript serialization used for preventing XSS attacks
 - Used `styled components` for styling
+- Build and packaging using webpack
 
 
 ## Tech stack
