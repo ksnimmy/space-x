@@ -3,6 +3,8 @@ It is fully server side rendered app listing the space mission programs from an 
 
 The approach is to have a redux store created in the server side and shipping it with the data to the client side. Client side store will get initiated with this server state and hydrate method is used for rendering the react components at the client side.
 
+If the filters existed in the browser url, that would also be stored in the redux store and sent to client side to initiate the store. These filteres would show as preselected based on this state.
+
 - The implementation is scalable to add any routes for the server side rendering.
 - Implemented `react-helmet` for better SEO
 - Javascript serialization used for preventing XSS attacks
