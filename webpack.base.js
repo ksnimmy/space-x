@@ -1,5 +1,4 @@
 module.exports = {
-    mode: 'production',
     //tell the webpack to run babel on every file it runs through
     module: {
         rules: [
