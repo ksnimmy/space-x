@@ -24,6 +24,13 @@ If the filters are existed in the browser url, that would also be stored in the 
 - Styled Components
 - ESlint
 
+## Available Scripts
+
+- `npm run dev` : to run the application in development mode
+- `npm run build`: to build and create a webpack bundle in production mode
+- `npm start`: to start the bundled application created by webpack in production mode
+- `npm run build:start`: to build and start the production bundle at once
+
 ## Light House Report
 
 ![Report](https://github.com/ksnimmy/space-x/blob/master/light_house.png)
