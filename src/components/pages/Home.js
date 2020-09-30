@@ -10,7 +10,7 @@ class Home extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            applyFilter: false
+            applyFilter: window.location.search? true: false
         };
     }
     applyFilter(isApplied) {
